@@ -116,3 +116,14 @@ String getAndroidPluginVersion() {
     it.moduleGroup == 'com.android.tools.build' && it.moduleName == 'gradle'
   }.moduleVersion
 }
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "bakytzhanov_groovy"
+    property "sonar.organization", "bakytzhanov"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
